@@ -1,9 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Nunito+Sans:wght@400;700&family=Roboto:ital,wght@0,400;1,400&display=swap');
+
 :root {
-  --font-family: "Roboto", sans-serif;
-  --second-family: "Quicksand", sans-serif;
-  --third-family: "Nunito Sans", sans-serif;
+  --font-primary: "Quicksand", sans-serif;
+  --font-secondary: "Nunito Sans", sans-serif;
+  --font-base: "Roboto", sans-serif;
 }
 
+html,
+body {
+  font-family: var(--font-primary);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-secondary);
+}
+
+p,
+li,
+.content {
+  font-family: var(--font-base);
+}
 
 
 body {
@@ -22,7 +43,7 @@ body {
     font-size: 25px;
     line-height: 100%;
     color: var(--text);
-    
+
     .logo {
       margin-left: 130px;
     }
@@ -53,7 +74,8 @@ body {
     border-bottom: none;
     justify-content: space-between;
     align-items: end;
-    
+    margin-bottom: 60px;
+
 
     .design,
     .ecommerce,
@@ -66,7 +88,9 @@ body {
       box-sizing: border-box;
     }
 
-    .design:hover, .ecommerce:hover, .application:hover {
+    .design:hover,
+    .ecommerce:hover,
+    .application:hover {
       background-color: aqua;
       border-color: green;
       transition: 0.9s ease;
@@ -84,19 +108,38 @@ body {
     line-height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 0;
+
+
+    .logo {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+
   }
 
-  .icon-instagram, .icon-facebook, .icon-twitter, .icon-github, .icon-dribble {
+  .icon-instagram,
+  .icon-facebook,
+  .icon-twitter,
+  .icon-github,
+  .icon-dribble {
     width: 38px;
     height: 38px;
     stroke: white;
     padding-right: 10px;
   }
 
-  .icon-instagram:hover, .icon-facebook:hover, .icon-twitter:hover, .icon-github:hover, .icon-dribble:hover {
+  .icon-instagram:hover,
+  .icon-facebook:hover,
+  .icon-twitter:hover,
+  .icon-github:hover,
+  .icon-dribble:hover {
     stroke: aqua;
     transition: 0.5s ease;
   }
 }
-
-
