@@ -13,39 +13,31 @@ body {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-secondary);
-}
-
 p,
 li,
 .content {
   font-family: var(--font-base);
 }
 
-
 body {
-  width: 1440px;
-  height: 934px;
 
-  header {
-    width: 1440px;
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .logo {
     height: 80px;
-    font-family: quicksand;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #EFEEF3;
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 100%;
-    color: var(--text);
+    gap: 13px;
 
-    .logo {
-      margin-left: 130px;
+    h1 {
+      font-family: var(--second-family);
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 100%;
+      color: var(--text);
     }
   }
 
@@ -62,11 +54,6 @@ body {
     transition: background-color 0.3s ease;
   }
 
-  service:hover {
-    background-color: aqua;
-  }
-
-
   .services {
     display: flex;
     width: 1170px;
@@ -76,40 +63,70 @@ body {
     align-items: end;
     margin-bottom: 60px;
 
+    p {
+      font-family: var(--font-family);
+      line-height: 175%;
+      color: var(--text);
+    }
 
     .design,
     .ecommerce,
     .application {
-      width: 340px;
-      height: 370px;
+      width: 370px;
+      height: 340px;
       border: 1px solid #EFEEF3;
       align-content: center;
-      padding: 40px;
+      padding: 39px;
       box-sizing: border-box;
+      border-radius: 8px;
     }
 
     .design:hover,
     .ecommerce:hover,
     .application:hover {
-      background-color: aqua;
-      border-color: green;
+      border: 1px solid #3db370;
       transition: 0.9s ease;
     }
+    :hover {
+      [fill="#D1E7FF"] {
+        fill: #E1F4F5;
+      }
+
+      [fill="#E8F3FF"] {
+        fill: #F4FEFF;
+      }
+
+      [fill="#B9DCFF"] {
+        fill: #CAEFF2;
+      }
+
+      [fill="#007FFC"] {
+        fill: #3DB370;
+      }
+    }
+    
   }
 
+  
   footer {
-    width: 1440px;
     height: 193px;
     background-color: #16133D;
-    color: white;
-    font-family: var(--second-family);
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 20px 0;
+
+    .container {
+      display: flex;
+      height: 100%;
+      box-sizing: border-box;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px 0;
+    }
+
+    button {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+    }
 
 
     .logo {
@@ -118,28 +135,35 @@ body {
       display: flex;
       align-items: center;
       gap: 10px;
+
+      h2 {
+        color: white;
+        font-family: var(--second-family);
+        font-weight: 500;
+        line-height: 100%;
+      }
     }
 
 
-  }
+    .icon-instagram,
+    .icon-facebook,
+    .icon-twitter,
+    .icon-github,
+    .icon-dribble {
+      width: 38px;
+      height: 38px;
+      stroke: white;
+      padding-right: 10px;
+    }
 
-  .icon-instagram,
-  .icon-facebook,
-  .icon-twitter,
-  .icon-github,
-  .icon-dribble {
-    width: 38px;
-    height: 38px;
-    stroke: white;
-    padding-right: 10px;
-  }
+    .icon-instagram:hover,
+    .icon-facebook:hover,
+    .icon-twitter:hover,
+    .icon-github:hover,
+    .icon-dribble:hover {
+      fill: aqua;
+      transition: 0.5s ease;
 
-  .icon-instagram:hover,
-  .icon-facebook:hover,
-  .icon-twitter:hover,
-  .icon-github:hover,
-  .icon-dribble:hover {
-    stroke: aqua;
-    transition: 0.5s ease;
+    }
   }
 }
